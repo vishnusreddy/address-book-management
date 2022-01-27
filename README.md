@@ -17,7 +17,8 @@ DATABASES = {
 }
 ```
 3. Now enter ```python manage.py makemigrations``` and ```python manage.py migrate``` in the terminal to update the database. 
-4. Go to Postman and accordingly access the API endpoints. 
+4. To start the server, run ```python manage.py runserver```. 
+5. Go to Postman and accordingly access the API endpoints. 
 
 ## API Endpoints
 1. Make a POST request to ```http://127.0.0.1:8000/address-api/create/``` with data in the JSON format to **add an address**. 
