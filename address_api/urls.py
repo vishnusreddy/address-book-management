@@ -3,7 +3,7 @@ from address_api import views
 
 urlpatterns = [
     path("all-addresses/",views.ListAddressAPIView.as_view(),name="address_list"),
-    path('all-addresses/<int:pincode>/', views.FilterAddressAPIView.as_view()),
+    path('all-addresses/pincode/<int:pincode>/', views.FilterAddressAPIView.as_view()),
     path("create/", views.CreateAddressAPIView.as_view(),name="address_create"),
     path("detail/<int:pk>/", views.DetailAddressAPIView.as_view(), name = "address_detail"),
     path("update/<int:pk>/",views.UpdateAddressAPIView.as_view(),name="update_address"),
