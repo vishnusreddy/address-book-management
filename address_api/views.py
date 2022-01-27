@@ -23,6 +23,15 @@ class ListAddressAPIView(ListAPIView):
 	queryset = Address.objects.all()
 	serializer_class = AddressSerializer
 
+class FilterAddressAPIView(ListAPIView):
+	"""GET - This endpoint lists all of the available addresses from the database"""
+	serializer_class = AddressSerializer
+	def get_queryset(self):
+		#queryset = Address.objects.all()
+		pincode = self.kwargs['pincode']
+		queryset = Address.objects.filter(pincode = pincode)
+		return queryset
+
 class CreateAddressAPIView(CreateAPIView):
 	"""POST - This endpoint allows for creation/addition of a new address"""
 	queryset = Address.objects.all()
