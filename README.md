@@ -1,5 +1,7 @@
 # Address Book Management
-A simple API built with Django Rest Framework and MySQL that allows you to add, update, view and delete addresses. 
+A simple API built with Django Rest Framework and MySQL that allows you to add, update, view and delete addresses.  
+
+Additional features I've added are - Find all addresses from a specific pincode (filter by pincode), mandated a unique phone number and a view to get address by phone number. 
 
 ## Steps to Replicate
 1. Clone the code in the repository with ```git clone https://github.com/vishnureddys/address-book-management``` and then ```cd address-book-management```.
