@@ -23,6 +23,15 @@ class ListAddressAPIView(ListAPIView):
 	queryset = Address.objects.all()
 	serializer_class = AddressSerializer
 
+class DetailPhoneAddressAPIView(ListAPIView):
+	"""GET - This endpoint lists all of the available addresses from the database"""
+	serializer_class = AddressSerializer
+	def get_queryset(self):
+		#queryset = Address.objects.all()
+		phone = self.kwargs['phone']
+		queryset = Address.objects.filter(phone_no = phone)
+		return queryset
+
 class FilterAddressAPIView(ListAPIView):
 	"""GET - This endpoint lists all of the available addresses from the database"""
 	serializer_class = AddressSerializer
