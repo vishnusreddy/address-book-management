@@ -79,3 +79,32 @@ DATABASES = {
     }
 ]
 ```
+6. Make a GET request to ```http://127.0.0.1:8000/address-api/detail/phone/<phone number>/``` to get details based on the phone number of the user. 
+7. Make a GET request to ```http://127.0.0.1:8000/address-api/all-addresses/pincode/<pincode>/``` to filter addresses based on pincode. For example, check out the below JSON returned for the request ```http://127.0.0.1:8000/address-api/all-addresses/pincode/560102/```.
+
+```json
+[
+    {
+        "id": 1,
+        "name": "Vishnu S Reddy",
+        "phone_no": "9742914197",
+        "door_no": "#545/146A",
+        "street": "22nd main road",
+        "locality": "HSR Sector 1",
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "pincode": "560102"
+    },
+    {
+        "id": 4,
+        "name": "Jerry Sienfelf",
+        "phone_no": "9538884111",
+        "door_no": "#1891",
+        "street": "19th main road",
+        "locality": "HSR Layout",
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "pincode": "560102"
+    }
+]
+```
