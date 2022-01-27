@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Address(models.Model):
 	name = models.CharField(max_length = 30)
-	phone_no = models.CharField(max_length=10)
+	phone_no = models.CharField(max_length=10, unique=True)
 	door_no = models.CharField(max_length = 10)
 	street = models.CharField(max_length = 50)
 	locality = models.CharField(max_length = 40)
